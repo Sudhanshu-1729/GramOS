@@ -1,40 +1,50 @@
-# Logs
+# Environment & Sensitive Files (ALWAYS IGNORED)
+.env
+.env.*
+!.env.example
+!.env.template
+*.env
+secrets.json
+secrets.yaml
+credentials.json
+*.pem
+*.key
+*.crt
+*.pfx
+*.p12
+
+# Logs & Debugging
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Node dependencies & builds
+node_modules/
+dist/
+dist-ssr/
 *.local
 
-# Editor directories and files
+# Editor & System files
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
+Thumbs.db
+desktop.ini
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# Environment files
-.env
-.env.production
-.env.development
-.env.local
-.env.*.local
-.env.production.local
-.env.development.local
-
 # Database engine files
 *.db
 *.db-journal
+*.db-wal
+*.db-shm
 *.sqlite
 *.sqlite3
 ruralos.db
@@ -52,7 +62,7 @@ venv/
 env/
 ENV/
 
-# Local application directories
+# Local application directories & uploads
 uploads/
 ml_models/
 backend/app/uploads/
